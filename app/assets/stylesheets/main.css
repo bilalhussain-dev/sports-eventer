@@ -1,0 +1,6 @@
+.hero__section {
+    background-image: linear-gradient(to right bottom, rgba(12, 12, 53, 0.308), rgba(0, 0, 0, 0.418)),url("https://images.pexels.com/photos/1046538/pexels-photo-1046538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-size: cover;
+
+}
