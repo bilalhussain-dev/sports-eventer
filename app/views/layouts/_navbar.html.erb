@@ -1,3 +1,5 @@
+
+<% if controller_name === 'pages'%>
 <header class="h-screen hero__section relative">
     <nav class="flex items-center justify-between py-5 px-7 border-b border-gray-400">
         <h3 class="text-white text-3xl font-bold">LOGO</h3>
@@ -17,7 +19,7 @@
             <span class="block">Sporting Spectacle</span>
         </h1>
         <div class="flex gap-5">
-            <a href="" class="text-blue-800 font-semibold bg-white rounded px-10 py-4 text-xl">Explore Events</a>
+            <a href="" class="w-full text-[16px] md:w-auto text-center text-blue-800 font-semibold bg-white rounded px-10 py-4 md:text-xl block md:inline-block">Explore Events</a>
         </div>
 
 
@@ -32,8 +34,21 @@
                 <input type="text" placeholder="Location" class="border-l-0 border-t-0 md:border-b-0 border-r-0 md:border-r-2 border-gray-100 focus:ring-0 focus:ring-offset-0 focus:border-0 w-full md:w-auto"> <!-- Adjusted border direction and width -->
                 <button type="submit" class="px-10 py-5 bg-blue-800 text-white rounded">Search</button>
             </form>
-        </div>
-        
-              
+        </div>  
     </div>
 </header>
+<% else %>
+
+<nav class="flex items-center justify-between py-5 px-7 border-b border-gray-400 bg-blue-800">
+    <h3 class="text-white text-3xl font-bold">LOGO</h3>
+    <ul class="hidden sm:flex gap-7"> <!-- Hide on small screens (mobile) -->
+        <li><a href="#" class="text-white font-semibold uppercase">Home</a></li>
+        <li><a href="#" class="text-white font-semibold uppercase">Explore Events</a></li>
+        <li><a href="#" class="text-white font-semibold uppercase">Forum</a></li>
+        <li><a href="#" class="text-white font-semibold uppercase">About</a></li>
+        <li><a href="#" class="bg-white px-6 py-3 rounded text-blue-800 font-semibold mx-5">Sign In</a></li> 
+    </ul>
+    <a href="#" class="block sm:hidden bg-blue-800 px-6 py-3 rounded text-white font-semibold mx-5">Sign In</a> <!-- Show on small screens (mobile) -->
+</nav>
+<% end %>
+
