@@ -3,4 +3,6 @@ class TemplatesController < ApplicationController
   end
   def signup
   end
+  def events
+  end
 end

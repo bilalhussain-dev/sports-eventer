@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root "pages#home"
   get "login", to: "templates#login"
   get "signup", to: "templates#signup"
+  get "explore-events", to: "templates#events"
 
 
 end
