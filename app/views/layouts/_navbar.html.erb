@@ -1,10 +1,14 @@
 <% if controller_name==='pages' %>
     <header class="h-screen relative" style="background-image: url('<%= asset_path('sports-event-hero.png') %>');">
         <nav class="flex items-center justify-between py-3 md:py-5 px-3 md:px-7 border-b border-gray-400">
-            <div class="flex items-center gap-5">
-                <h3 class="text-white text-3xl font-bold">LOGO</h3>
+            <div class="flex items-center gap-3">
+                <!-- <h3 class="text-white text-3xl font-bold">LOGO</h3> -->
+                <%= image_tag("logo-no-background.png", class:'h-[60px] object-cover cursor-pointer') %>
+
                 <div class="relative">
-                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded">
+
+                    <!-- Location Link -->
+                    <div class="flex items-center gap-2 bg-white px-4 py-2 rounded hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -14,55 +18,55 @@
                         </svg>
                         <button class="text-indigo-700 font-semibold">Choose Location</button>
                     </div>
-                    <div class="absolute top-[45px] bg-white left-0 p-4  md:w-[70%] rounded z-[1000]">
-                        <input type="text" placeholder="Search Location"
-                            class="px-4 py-2 rounded border border-gray-200">
-                        <ul class="list-none py-2 text-[14px]">
-                            <li class="py-4 border-b border-gray-100">
-                                <div class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                                    </svg>
-                                    <div>
-                                        <strong>United Stats</strong>
-                                        <span>California</span>
+
+                    <!-- Hide Locaiton List -->
+                    <div class="hidden">
+                        <div class="absolute top-[45px] bg-white left-0 p-4 rounded z-[1000]">
+                            <input type="text" placeholder="Search Location"
+                                class="px-4 py-2 rounded border border-gray-200">
+                            <ul class="list-none py-2 text-[14px]">
+                                <li class="py-4 border-b border-gray-100">
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                        <div>
+                                            <strong>United Stats</strong>
+                                            <span>California</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-
-
-                            <li class="py-4 border-b border-gray-100">
-                                <div class="flex items-center gap-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                                    </svg>
-                                    <div>
-                                        <strong>United Stats</strong>
-                                        <span>Florida</span>
+                                </li>
+    
+    
+                                <li class="py-4 border-b border-gray-100">
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                        <div>
+                                            <strong>United Stats</strong>
+                                            <span>Florida</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-
-
-
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <ul class="hidden sm:flex gap-7"> <!-- Hide on small screens (mobile) -->
-                <li><a href="#" class="text-white font-semibold uppercase">Home</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">Explore Events</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">Forum</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">About</a></li>
+                <li><a href="/" class="text-white font-semibold uppercase">Home</a></li>
+                <li><a href="/explore-events" class="text-white font-semibold uppercase">Explore Events</a></li>
+                
                 <li><a href="#" class="bg-white px-6 py-3 rounded text-indigo-700 font-semibold mx-5">Sign In</a></li>
             </ul>
             <a href="/login" class="block sm:hidden bg-white px-6 py-3 rounded text-indigo-700 font-semibold mx-5">Sign
@@ -71,8 +75,8 @@
 
         <div class="container p-5 md:p-0 mx-auto absolute top-[10%] md:top-[40%] left-0 md:left-10">
             <h1 class=" text-4xl md:text-6xl font-extrabold text-white mb-7">
-                <span class="block">Experience the Global</span>
-                <span class="block">Sporting Spectacle</span>
+                <span class="block">Športové udalosti 2024l</span>
+                <span class="block">Kalendár podujatí na celý</span>
             </h1>
             <div class="flex gap-5">
                 <a href="/explore-events"
@@ -118,16 +122,17 @@
     </header>
     <% else %>
 
-        <nav class="flex items-center justify-between py-5 px-7 border-b border-gray-400 bg-gray-900">
-            <h3 class="text-white text-3xl font-bold">LOGO</h3>
+        <nav class="flex items-center justify-between py-3 px-2 border-b border-gray-400 bg-gray-900">
+            <%= image_tag("logo-no-background.png", class:'h-[70px] object-cover cursor-pointer') %>
             <ul class="hidden sm:flex gap-7"> <!-- Hide on small screens (mobile) -->
-                <li><a href="#" class="text-white font-semibold uppercase">Home</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">Explore Events</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">Forum</a></li>
-                <li><a href="#" class="text-white font-semibold uppercase">About</a></li>
+                <li><a href="/" class="text-white font-semibold uppercase">Home</a></li>
+                <li><a href="/explore-events" class="text-white font-semibold uppercase">Explore Events</a></li>
+                
                 <li><a href="#" class="bg-white px-6 py-3 rounded text-indigo-700 font-semibold mx-5">Sign In</a></li>
             </ul>
-            <a href="#" class="block sm:hidden bg-indigo-700 px-6 py-3 rounded text-white font-semibold mx-5">Sign
-                In</a> <!-- Show on small screens (mobile) -->
+            <a href="/signup" class="block sm:hidden bg-indigo-700 px-6 py-3 rounded text-white font-semibold mx-5">Create Account</a>
+                
+              
+            <!-- Show on small screens (mobile) -->
         </nav>
         <% end %>
