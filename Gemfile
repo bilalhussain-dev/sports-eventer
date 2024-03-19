@@ -69,3 +69,8 @@ end
 gem "tailwindcss-rails", "~> 2.3"
 
 gem "devise", "~> 4.9"
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
