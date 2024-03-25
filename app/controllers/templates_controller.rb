@@ -1,4 +1,5 @@
 class TemplatesController < ApplicationController
+
   # before_action :authenticate_user!
 
   def login
@@ -7,4 +8,5 @@ class TemplatesController < ApplicationController
   end
   def events
   end
+
 end
